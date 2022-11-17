@@ -98,7 +98,7 @@ if(isset($_POST['login']))
 {  
     $nip=$_POST['nip'];  
     $pass=md5($_POST['pass']);   
-    $run =  mysqli_query($con, "select * from user WHERE nip=$nip AND pass=$pass");  
+    $run =  mysqli_query($con, "select * from user WHERE nip='$nip' AND pass='$pass'");  
 	$xrun = mysqli_fetch_assoc($run);
     if(mysqli_num_rows($run) > 0)  
     {  
