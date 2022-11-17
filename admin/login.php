@@ -111,7 +111,7 @@ if(isset($_POST['login']))
     }  
     else  
     {  
-      echo "<script>alert('Username atau Password SALAH!')</script>";  
+      echo "<script>alert('Username atau Password SALAH!, $pass, $nip')</script>";  
     }  
 }  
 ?>  
