@@ -113,7 +113,7 @@ if(isset($_POST['login']))
     }  
     else  
     {  
-      echo "<script>alert('Username atau Password SALAH!, $count, $nipz, $sql')</script>";  
+      echo "<script>alert('Username atau Password SALAH!, $count,$nipz')</script>";  
     }  
 }  
 ?>  
