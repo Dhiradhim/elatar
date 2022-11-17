@@ -98,11 +98,11 @@ if(isset($_POST['login']))
 {  
     $nip=$_POST['nip'];  
     $pass=md5($_POST['pass']);   
-    $run =  mysqli_query($con, "select count(*) as data from user WHERE nip='$nip' AND pass='$pass'");  
+    $run =  mysqli_query($con, "select *, count(*) as data from user WHERE nip='$nip' AND pass='$pass'");  
 	$xrun = mysqli_fetch_assoc($run);
     $count = $xrun['data'];
     if($count > 0)  
-    {  
+    {
         echo "<script>window.open('index.php','_self')</script>";  
   
         $_SESSION['nip']=$xrun['nip'];
