@@ -98,7 +98,8 @@ if(isset($_POST['login']))
 {  
     $nip=$_POST['nip'];  
     $pass=md5($_POST['pass']);   
-    $run =  mysqli_query($con, "select *, count(*) as data from user WHERE nip='$nip' AND pass='$pass'");  
+    $sql = "select *, count(*) as data from user WHERE nip='$nip' AND pass='$pass'";
+    $run =  mysqli_query($con, $sql);  
 	$xrun = mysqli_fetch_assoc($run);
     $count = $xrun['data'];
     $nipz = $xrun['nip'];
@@ -112,7 +113,7 @@ if(isset($_POST['login']))
     }  
     else  
     {  
-      echo "<script>alert('Username atau Password SALAH!, $count,$nipz')</script>";  
+      echo "<script>alert('Username atau Password SALAH!, $count,$nipz, $')</script>";  
     }  
 }  
 ?>  
