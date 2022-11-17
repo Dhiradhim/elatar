@@ -21,8 +21,9 @@ if(isset($_POST['login']))
     }  
     else  
     {  
-      echo "<script>alert('Username atau Password SALAH!')</script>";
-      echo "<script>window.history.back()</script>";  
+    echo $sql;
+        //   echo "<script>alert('Username atau Password SALAH!')</script>";
+    //   echo "<script>window.history.back()</script>";  
     }  
 }  
 ?>  
