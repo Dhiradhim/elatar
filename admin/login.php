@@ -14,7 +14,7 @@ session_start();//session starts here
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SiBaca - Login</title>
+    <title>E-Latar - Login</title>
   <link href="../assets/img/favicon.png" rel="icon">
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
     <!-- Custom fonts for this template-->
@@ -45,7 +45,7 @@ session_start();//session starts here
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Login SiBaca</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Login E-Latar</h1>
                                     </div>
                                     <form class="user" method="post" action="login.php">
                                         <div class="form-group">
