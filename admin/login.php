@@ -101,6 +101,8 @@ if(isset($_POST['login']))
     $run =  mysqli_query($con, "select *, count(*) as data from user WHERE nip='$nip' AND pass='$pass'");  
 	$xrun = mysqli_fetch_assoc($run);
     $count = $xrun['data'];
+    $nipz = $xrun['nip'];
+
     if($count > 0)  
     {
         echo "<script>window.open('index.php','_self')</script>";  
@@ -110,7 +112,7 @@ if(isset($_POST['login']))
     }  
     else  
     {  
-      echo "<script>alert('Username atau Password SALAH!, $count')</script>";  
+      echo "<script>alert('Username atau Password SALAH!, $count,$nipz')</script>";  
     }  
 }  
 ?>  
