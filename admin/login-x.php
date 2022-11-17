@@ -1,6 +1,6 @@
 <?php  
 session_start();//session starts here   
-include("koneksi.php");  
+include("../koneksi.php");  
   
 if(isset($_POST['login']))  
 {  
@@ -21,9 +21,8 @@ if(isset($_POST['login']))
     }  
     else  
     {  
-    echo $sql;
-        //   echo "<script>alert('Username atau Password SALAH!')</script>";
-    //   echo "<script>window.history.back()</script>";  
+      echo "<script>alert('Username atau Password SALAH!')</script>";
+      echo "<script>window.history.back()</script>";  
     }  
 }  
 ?>  
