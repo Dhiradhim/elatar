@@ -4,6 +4,7 @@ include "koneksi.php";
  $row = mysqli_fetch_assoc($q);
  $id_suara = $row['id_suara']+1;
 $number = count($_POST["text"]);
+
  if($number > 0) { 
      $message = false;
      for($i=0; $i<$number; $i++) {
