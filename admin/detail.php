@@ -51,7 +51,7 @@ if(!$_SESSION['nip'])
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center">
-                <div class="sidebar-brand-text mx-3">SiBaca</div>
+                <div class="sidebar-brand-text mx-3">E-Latar</div>
             </a>
             <!-- Heading -->
             <div class="sidebar-heading">
