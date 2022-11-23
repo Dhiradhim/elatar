@@ -67,10 +67,12 @@
               <div class="row gy-4" id="dynamic_field_append">
 				<div class="row gy-4">
 					<div class="col-md-11">
-						<textarea readonly class="form-control" id="result1" name="text[]" rows="6" placeholder="Pesan Anda"></textarea>
+						<textarea class="form-control" id="result1" name="text[]" rows="6" placeholder="Pesan Anda"></textarea>
 					</div>
 					<div class="col-md-1">
-						<button class="btn btn-success" class="butt js--triggerAnimation" id="start1" type="button" value="Bicara" onclick="dengar('1');">MULAI</button>
+						<button class="btn btn-success" class="butt js--triggerAnimation" id="start1" type="button" value="Bicara" onclick="dengar('1');">Rekam</button>
+            <br><br>
+            <button class="btn btn-primary" class="butt js--triggerAnimation" onclick="responsiveVoice.speak($('#result1').val(), 'Indonesian Male', {rate: 1}); document.getElementById('sound').play();" type="button"  value="Play">Dengar</button>
 						<br><br>
 					</div>
 				</div>
@@ -171,9 +173,11 @@
                var i = 1;
                   dengar1 = "dengar('";
                   dengar2 = "');";
+                  suara1 = "responsiveVoice.speak($('#result";
+			            suara2 = "').val(), 'Indonesian Male', {rate: 1}); document.getElementById('sound').play();";
                $('#add_field').click(function(){  
                    i++; 
-                   $('#dynamic_field_append').append('<div class="row gy-4" id="row_remove'+i+'"><div class="col-md-11"><textarea readonly class="form-control" id="result'+i+'" name="text[]" rows="6" placeholder="Pesan Anda"></textarea></div> <div class="col-md-1"> <button class="btn btn-success" class="butt js--triggerAnimation" id="start'+i+'" type="button" value="Bicara" onclick="'+dengar1+''+i+''+dengar2+'">MULAI</button><br><br><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">HAPUS</button></div></div>');
+                   $('#dynamic_field_append').append('<div class="row gy-4" id="row_remove'+i+'"><div class="col-md-11"><textarea class="form-control" id="result'+i+'" name="text[]" rows="6" placeholder="Pesan Anda"></textarea></div> <div class="col-md-1"> <button class="btn btn-success" class="butt js--triggerAnimation" id="start'+i+'" type="button" value="Bicara" onclick="'+dengar1+''+i+''+dengar2+'">Rekam</button><br><br><button  type="button" class="btn btn-primary" class="butt js--triggerAnimation" onclick="'+suara1+''+i+''+suara2+'">Dengar</button><br><br><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">Hapus</button></div></div>');
                });
                $(document).on('click', '.btn_remove', function() {
                    var button_id = $(this).attr("id");
