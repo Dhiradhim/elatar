@@ -19,7 +19,7 @@ if(!$_SESSION['nip'])
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SiBaca - Sistem Bantu Tuna Wicara</title>
+    <title>ELATAR - Layanan Tuna Rungu</title>
   <link href="../assets/img/favicon.png" rel="icon">
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
     <!-- Custom fonts for this template-->
